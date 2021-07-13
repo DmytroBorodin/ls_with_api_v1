@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.188" height="30" viewBox="0 0 31.188 30">
+  <g id="Group_289" data-name="Group 289" transform="translate(-32 -449)">
+    <text id="A" transform="translate(32 473)" fill="#099ff9" font-size="22" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">A</tspan></text>
+    <g id="Group_288" data-name="Group 288" transform="translate(62 458.5) rotate(90)">
+      <path id="Path_263" data-name="Path 263" d="M0,1.886a10.071,10.071,0,0,1,11.735,0" transform="translate(1.132 4.902)" fill="none" stroke="#099ff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_264" data-name="Path 264" d="M0,.675a10.223,10.223,0,0,1,7.307,0" transform="translate(3.331 9.325)" fill="none" stroke="#099ff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_447" data-name="Path 447" d="M0,2.8C4.428-.934,9.572-.934,14,2.8" transform="translate(0 0)" fill="none" stroke="#099ff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
