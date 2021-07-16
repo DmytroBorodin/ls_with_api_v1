@@ -755,7 +755,7 @@
             <p class="trial__item__text">
               Unlimited free access for 7-days, then $22.99 per year ($ 1.92/month)
             </p>
-            <a href="#" class="plans__link">View all plans</a>
+            <a href="#" class="plans__link" id="all__plans">View all plans</a>
           </div>
           <div class="qa__block">
             <h4 class="qa__title">How can I cancel?</h4>
@@ -768,7 +768,13 @@
         <div class="footer__block">
           <div class="main__block">
             <div class="button__wrapper full__width__btn primary">
-              <button class="app__btn primary">Start 7-day free trial</button>
+              <button
+                class="app__btn primary"
+                id="free__trial__btn"
+                onclick="purchaseSubscription();"
+              >
+                Start 7-day free trial
+              </button>
             </div>
             <div class="main__footer__text">
               Cancel subscription up to 24h before trial ends. You will only be charged after 7 days

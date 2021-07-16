@@ -20,27 +20,18 @@ appBtns.forEach((btn) => {
     let btnIndex = appBtns.indexOf(btn);
     currentPageNumber = btnIndex + 1;
     // we block the transition for the last 2 pages, cause they need to trigger other fucntions
-    if (currentPageNumber == "9" || currentPageNumber == "12") {
-      return false;
-    }
+    // if (currentPageNumber == "9" || currentPageNumber == "12") {
+    //   return false;
+    // }
 
     if (!appBtnsWraps[btnIndex].classList.contains("disabled")) {
       btnIndex === appBtns.length - 1
         ? false
         : pages.forEach((page) => {
             page.classList.add("disabled");
-            pages[btnIndex + 1].classList.remove("disabled");
-            if (pages[btnIndex + 1].getAttribute("id") === "page_ten") {
-              body.classList.add("darkmode");
-              let closeBtn = pages[btnIndex + 1].querySelector(".close__btn");
-              closeBtn.addEventListener("click", () => {
-                body.classList.remove("darkmode");
-                pages[btnIndex + 1].classList.add("disabled");
-                pages[btnIndex].classList.remove("disabled");
-              });
-            } else if (body.classList.contains("darkmode")) {
-              body.classList.remove("darkmode");
-            }
+            btn.getAttribute("id") === "free__trial__btn"
+              ? pages[btnIndex + 2].classList.remove("disabled")
+              : pages[btnIndex + 1].classList.remove("disabled");
           });
     } else {
       return;
@@ -262,6 +253,36 @@ appBtns[4].addEventListener("click", () => {
 
 // page nine settings
 
+let viewAllPlansBtn = document.getElementById("all__plans");
+
+viewAllPlansBtn.addEventListener("click", () => {
+  console.log(this);
+  currentPageNumber += 1;
+  console.log(currentPageNumber);
+  pages.forEach((page) => {
+    page.classList.add("disabled");
+  });
+  pages[currentPageNumber].classList.remove("disabled");
+  if (pages[currentPageNumber].getAttribute("id") === "page_ten") {
+    body.classList.add("darkmode");
+    let closeBtn = pages[currentPageNumber].querySelector(".close__btn");
+    closeBtn.addEventListener("click", openPlansPage);
+  } else if (body.classList.contains("darkmode")) {
+    body.classList.remove("darkmode");
+  }
+});
+
+function openPlansPage() {
+  body.classList.remove("darkmode");
+  pages[currentPageNumber].classList.add("disabled");
+  pages[currentPageNumber - 1].classList.remove("disabled");
+  currentPageNumber -= 1;
+  // closeBtn.removeEventListener("click", openPlansPage);
+  console.log(currentPageNumber);
+}
+
+// page ten settings
+
 let planBlocks = [...document.querySelectorAll(".plan__wrapper")];
 
 planBlocks.forEach((block) => {
@@ -273,7 +294,7 @@ planBlocks.forEach((block) => {
   });
 });
 
-// page ten settings
+// page eleven settings
 
 let startLetter = document.querySelector(".child__name__start__letter");
 appBtns[appBtns.length - 2].addEventListener("click", () => {
